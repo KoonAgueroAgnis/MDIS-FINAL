@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{194048AE-523C-4144-8B26-C2B424BBA663}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MDIS_DESIGN.My.MyApplication</StartupObject>
+    <RootNamespace>MDIS_DESIGN</RootNamespace>
+    <AssemblyName>MDIS-DESIGN</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MDIS-DESIGN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MDIS-DESIGN.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Health-Sign-blue.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 6.9.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySqlBackup, Version=2.0.9.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySqlBackup.NET.2.0.9.5\lib\net45\MySqlBackup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBAccess.vb" />
+    <Compile Include="frmMnu.Designer.vb">
+      <DependentUpon>frmMnu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMnu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination\frmDentalChart.Designer.vb">
+      <DependentUpon>frmDentalChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\frmDentalChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination\frmDentalExamination.Designer.vb">
+      <DependentUpon>frmDentalExamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\frmDentalExamination.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination\frmHeathExamination.Designer.vb">
+      <DependentUpon>frmHeathExamination.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\frmHeathExamination.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsMenu\frmManagePatient.Designer.vb">
+      <DependentUpon>frmManagePatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsMenu\frmManagePatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examination\frmMinorComplaints.Designer.vb">
+      <DependentUpon>frmMinorComplaints.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Examination\frmMinorComplaints.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientsMenu\frmRegisterPatient.Designer.vb">
+      <DependentUpon>frmRegisterPatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PatientsMenu\frmRegisterPatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmPrintReports.Designer.vb">
+      <DependentUpon>frmPrintReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmPrintReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmReport.Designer.vb">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\frmViewAllPatients.Designer.vb">
+      <DependentUpon>frmViewAllPatients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\frmViewAllPatients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPatients.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPatients.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Account\frmBackupRestore.Designer.vb">
+      <DependentUpon>frmBackupRestore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Account\frmBackupRestore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Account\frmManageUsers.Designer.vb">
+      <DependentUpon>frmManageUsers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Account\frmManageUsers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmMnu.resx">
+      <DependentUpon>frmMnu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination\frmDentalChart.resx">
+      <DependentUpon>frmDentalChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination\frmDentalExamination.resx">
+      <DependentUpon>frmDentalExamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination\frmHeathExamination.resx">
+      <DependentUpon>frmHeathExamination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsMenu\frmManagePatient.resx">
+      <DependentUpon>frmManagePatient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examination\frmMinorComplaints.resx">
+      <DependentUpon>frmMinorComplaints.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientsMenu\frmRegisterPatient.resx">
+      <DependentUpon>frmRegisterPatient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmPrintReports.resx">
+      <DependentUpon>frmPrintReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmReport.resx">
+      <DependentUpon>frmReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\frmViewAllPatients.resx">
+      <DependentUpon>frmViewAllPatients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPatients.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPatients.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\frmBackupRestore.resx">
+      <DependentUpon>frmBackupRestore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Account\frmManageUsers.resx">
+      <DependentUpon>frmManageUsers.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rael.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mpcLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Health-Sign-blue.ico" />
+    <None Include="Resources\male.png" />
+    <None Include="Resources\female.png" />
+    <None Include="Resources\x-rays.png" />
+    <None Include="Resources\water.png" />
+    <None Include="Resources\transfusion.png" />
+    <None Include="Resources\tooth.png" />
+    <None Include="Resources\thermometer.png" />
+    <None Include="Resources\test-tube.png" />
+    <None Include="Resources\tablets.png" />
+    <None Include="Resources\syringe.png" />
+    <None Include="Resources\strip.png" />
+    <None Include="Resources\stethoscope.png" />
+    <None Include="Resources\smartphone.png" />
+    <None Include="Resources\science.png" />
+    <None Include="Resources\scalpel.png" />
+    <None Include="Resources\report-1.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\placeholder.png" />
+    <None Include="Resources\pills.png" />
+    <None Include="Resources\nurse-1.png" />
+    <None Include="Resources\nurse.png" />
+    <None Include="Resources\molecule.png" />
+    <None Include="Resources\microscope.png" />
+    <None Include="Resources\medicine-3.png" />
+    <None Include="Resources\medicine-2.png" />
+    <None Include="Resources\medicine-1.png" />
+    <None Include="Resources\medicine.png" />
+    <None Include="Resources\medical-kit.png" />
+    <None Include="Resources\magnifying-glass.png" />
+    <None Include="Resources\lungs.png" />
+    <None Include="Resources\hospital-4.png" />
+    <None Include="Resources\hospital-3.png" />
+    <None Include="Resources\hospital-2.png" />
+    <None Include="Resources\hospital-1.png" />
+    <None Include="Resources\hospital.png" />
+    <None Include="Resources\heart.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\flask.png" />
+    <None Include="Resources\flag.png" />
+    <None Include="Resources\eye.png" />
+    <None Include="Resources\emergency-kit.png" />
+    <None Include="Resources\electrocardiogram.png" />
+    <None Include="Resources\dropper.png" />
+    <None Include="Resources\dna.png" />
+    <None Include="Resources\computer.png" />
+    <None Include="Resources\cardiogram.png" />
+    <None Include="Resources\book.png" />
+    <None Include="Resources\bed.png" />
+    <None Include="Resources\atomic.png" />
+    <None Include="Resources\apple.png" />
+    <None Include="Resources\ambulance.png" />
+    <None Include="Resources\aids.png" />
+    <None Include="Resources\vcard.png" />
+    <None Include="Resources\empathy.png" />
+    <None Include="Resources\kuser.png" />
+    <None Include="Resources\computer-fail.png" />
+    <None Include="Resources\user-info.png" />
+    <None Include="Resources\banner-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="About\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
